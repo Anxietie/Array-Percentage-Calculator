@@ -9,7 +9,7 @@ public class Main {
 		Scanner scanner = new Scanner(System.in);
 		System.out.print("Enter values in one line separated by a space: ");
 		String[] arr = scanner.nextLine().split(" ");
-		Map<Integer, Integer> m = new HashMap<Integer, Integer>();
+		Map<Integer, Integer> m = new HashMap<>();
 		for (int i = 0; i < arr.length; i++) {
 			if(m.get(Integer.parseInt(arr[i]))==null) {
 				m.put(Integer.parseInt(arr[i]),1);
