@@ -12,7 +12,8 @@ for i in range(len(inpArr)):
         stored_occurred[inpArr[i]] += 1
     else:
         stored_occurred[inpArr[i]] = 1
-#Create an iterable list of the occurrences
+#Create an iterable list of the keys and values
+dictKeys = list(stored_occurred.keys())
 dictValues = list(stored_occurred.values())
 #Create function to get the number with the most occurrences, as well as the amount of occurrences
 def getMaxs():
@@ -23,10 +24,10 @@ def getMaxs():
             localKey = i
             localMax = dictValues[i]
     globalMax = localMax
-    return localKey+1, localMax
+    return localKey, localMax
 #Assign key and max to the values
 key, max = getMaxs()
 #Arithmetic for easier printing
 computed = (float(max)/len(inpArr))*100
 mod = '%'
-print(str(key)+" has the highest chance with "+mod+str(computed))
+print(str(dictKeys[key])+" has the highest chance with "+mod+str(computed))
